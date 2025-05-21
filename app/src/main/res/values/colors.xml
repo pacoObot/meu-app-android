@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="azulperolado_200">#FF03DAC5</color>
+    <color name="azulperolado_700">#19DDDD</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="azulperolado_max">#36049EFF</color>
+    <color name="azulperolado_min">#03DAC5</color>
+    <color name="vermelho">#B90606</color>
+    <color name="background">#FFFFFF</color> <!-- Claro -->
+    <color name="textPrimary">#000000</color>
+    <color name="backgroundbl">#000000</color> <!-- Escuro -->
+    <color name="textPrimarybl">#FFFFFF</color>
+
+
+</resources>

@@ -1,0 +1,19 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Fundo (cinza claro) -->
+    <item android:id="@android:id/background">
+        <shape android:shape="ring">
+            <solid android:color="#DDDDDD"/>
+            <stroke android:width="16dp" android:color="#DDDDDD"/>
+        </shape>
+    </item>
+
+    <!-- Progresso (azul) -->
+    <item android:id="@android:id/progress">
+        <clip android:clipOrientation="horizontal" android:gravity="left">
+            <shape android:shape="ring">
+                <solid android:color="@android:color/transparent"/>
+                <stroke android:width="16dp" android:color="#3F51B5"/>
+            </shape>
+        </clip>
+    </item>
+</layer-list>
