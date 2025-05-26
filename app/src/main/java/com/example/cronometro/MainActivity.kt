@@ -3,7 +3,7 @@ package com.example.cronometro
 import android.app.Dialog
 import android.os.Bundle
 import android.os.CountDownTimer
-import android.view.View
+import android.os.Handler
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowCompat
@@ -28,13 +28,17 @@ class MainActivity : AppCompatActivity() {
         WindowCompat.setDecorFitsSystemWindows(window, false)
         setContentView(R.layout.activity_main)
 
-
         tvTempo = findViewById(R.id.tvTempo)
         temporstante = findViewById(R.id.temporstante)
         progressBar = findViewById(R.id.pbTempo)
         btnPlayPause = findViewById(R.id.btPlayPause)
         btnReset = findViewById(R.id.ib_reset)
         btnAdd = findViewById(R.id.btnAdd)
+
+        // Simulando uma "API mockada" com atraso
+        Handler().postDelayed({
+            Toast.makeText(applicationContext, "Dados carregados com sucesso!", Toast.LENGTH_SHORT).show()
+        }, 2000)
 
         btnAdd.setOnClickListener {
             abrirDialogoTempo()
@@ -87,9 +91,8 @@ class MainActivity : AppCompatActivity() {
         dialog.show()
     }
 
-
     private fun iniciarTemporizador() {
-        timeCountDown = object : CountDownTimer((timeSelected - timeProgress) * 1000L, 1000) {
+        timeCountDown = object : CountDownTimer(((timeSelected - timeProgress) * 1000L), 1000) {
             override fun onTick(millisUntilFinished: Long) {
                 timeProgress++
                 val tempoRestante = timeSelected - timeProgress
